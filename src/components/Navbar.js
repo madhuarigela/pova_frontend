@@ -20,7 +20,7 @@ export default function Navbar() {
         ? [
             { href: '/dashboard', label: 'Dashboard', icon: '🏠' },
             { href: '/log', label: 'Log Period', icon: '📝' },
-            { href: '/chat', label: 'Amma', icon: '💬' },
+            { href: '/chat', label: 'Amma', icon: '/amma-avatar.png' },
             { href: '/history', label: 'History', icon: '📊' },
             { href: '/settings', label: 'Settings', icon: '⚙️' },
         ]
