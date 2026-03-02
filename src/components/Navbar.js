@@ -38,9 +38,9 @@ export default function Navbar() {
             }}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
                 <Link href={user ? '/dashboard' : '/'} className="flex items-center gap-2 group">
-                    <span className="text-2xl group-hover:scale-110 transition-transform">🌸</span>
-                    <span className="text-xl font-bold bg-gradient-to-r from-pink-500 to-pink-700 bg-clip-text text-transparent">
-                        Period Helper
+                    <img src="/logo.png" alt="Pova" className="w-10 h-10 group-hover:scale-110 transition-transform object-contain" />
+                    <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-pink-700 bg-clip-text text-transparent">
+                        Pova
                     </span>
                 </Link>
 
@@ -51,8 +51,8 @@ export default function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${pathname === link.href
-                                    ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/25'
-                                    : 'text-gray-600 hover:text-pink-600 hover:bg-pink-50'
+                                ? 'bg-pink-500 text-white shadow-lg shadow-pink-500/25'
+                                : 'text-gray-600 hover:text-pink-600 hover:bg-pink-50'
                                 }`}
                         >
                             <span className="mr-1">{link.icon}</span>
@@ -97,8 +97,8 @@ export default function Navbar() {
                             href={link.href}
                             onClick={() => setMobileOpen(false)}
                             className={`block px-5 py-3 text-sm font-medium transition-all ${pathname === link.href
-                                    ? 'bg-pink-500 text-white'
-                                    : 'text-gray-600 hover:bg-pink-50'
+                                ? 'bg-pink-500 text-white'
+                                : 'text-gray-600 hover:bg-pink-50'
                                 }`}
                         >
                             <span className="mr-2">{link.icon}</span>

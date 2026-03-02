@@ -32,12 +32,13 @@ export default function Home() {
 
                 <div className="max-w-4xl mx-auto text-center relative z-10">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-100 text-pink-700 text-sm font-medium mb-8 animate-fade-in">
-                        🌸 Designed with empathy for women
+                        🌸 In sync with You
                     </div>
 
-                    <h1 className="text-5xl sm:text-7xl font-extrabold mb-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                    <h1 className="text-5xl sm:text-7xl font-extrabold mb-6 animate-fade-in flex flex-col items-center justify-center gap-6" style={{ animationDelay: '0.1s' }}>
+                        <img src="/logo.png" alt="Pova Logo" className="w-32 h-32 md:w-48 md:h-48 drop-shadow-2xl" />
                         <span className="bg-gradient-to-r from-pink-500 via-pink-600 to-lavender-500 bg-clip-text text-transparent">
-                            Period Helper
+                            Pova
                         </span>
                     </h1>
 
@@ -88,7 +89,7 @@ export default function Home() {
                 <div className="max-w-3xl mx-auto glass-card p-10 text-center pulse-glow">
                     <h2 className="text-3xl font-bold mb-4 text-gray-800">Ready to take control? 🌷</h2>
                     <p className="text-gray-500 mb-8">
-                        Join thousands of women who trust Period Helper for their cycle health.
+                        Join thousands of women who trust Pova for their cycle health.
                     </p>
                     <Link href="/signup" className="btn-primary text-lg px-8 py-4">
                         Start Tracking Today

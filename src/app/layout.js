@@ -3,9 +3,9 @@ import { AuthProvider } from '@/lib/AuthContext';
 import Navbar from '@/components/Navbar';
 
 export const metadata = {
-    title: 'Period Helper - Track Your Cycle with Care 🌸',
+    title: 'Pova - In sync with You 🌸',
     description: 'A secure, women-centered menstrual cycle tracking app. Track periods, get health insights, and chat with Amma — your AI health companion.',
-    keywords: 'period tracker, menstrual cycle, women health, cycle prediction, period helper',
+    keywords: 'period tracker, menstrual cycle, women health, cycle prediction, pova',
 };
 
 export default function RootLayout({ children }) {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
                         {children}
                     </main>
                     <footer className="text-center py-8 text-sm text-gray-400">
-                        <p>© 2026 Period Helper. Made with 💗 for women everywhere.</p>
+                        <p>© 2026 Pova. Made with 💗 for women everywhere.</p>
                         <p className="mt-1 text-xs">This app does not replace professional medical advice.</p>
                     </footer>
                 </AuthProvider>
