@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  /* Pink-centered color palette */
+  --color-pink-50: #FDF2F8;
+  --color-pink-100: #FCE7F3;
+  --color-pink-200: #FBCFE8;
+  --color-pink-300: #F9A8D4;
+  --color-pink-400: #F472B6;
+  --color-pink-500: #EC4899;
+  --color-pink-600: #DB2777;
+  --color-pink-700: #BE185D;
+  --color-pink-800: #9D174D;
+  --color-pink-900: #831843;
+
+  --color-rose-50: #FFF1F2;
+  --color-rose-100: #FFE4E6;
+  --color-rose-400: #FB7185;
+  --color-rose-500: #F43F5E;
+
+  --color-lavender-50: #F5F3FF;
+  --color-lavender-100: #EDE9FE;
+  --color-lavender-400: #A78BFA;
+  --color-lavender-500: #8B5CF6;
+
+  --color-sage-50: #F0FDF4;
+  --color-sage-100: #DCFCE7;
+  --color-sage-400: #4ADE80;
+  --color-sage-500: #22C55E;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, #FDF2F8 0%, #FFFFFF 50%, #F5F3FF 100%);
+  min-height: 100vh;
+}
+
+/* Dark mode */
+.dark body,
+.dark {
+  background: linear-gradient(135deg, #1a0a12 0%, #0f0f23 50%, #0d0a1a 100%);
+  color: #F9FAFB;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #F9A8D4;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #9D174D;
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.08);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  box-shadow: 0 12px 48px rgba(236, 72, 153, 0.15);
+  transform: translateY(-2px);
+}
+.dark .glass-card {
+  background: rgba(30, 15, 25, 0.7);
+  border-color: rgba(236, 72, 153, 0.15);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(236, 72, 153, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(236, 72, 153, 0.4); }
+}
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(236, 72, 153, 0.1);
+  color: #DB2777;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: rgba(236, 72, 153, 0.2);
+}
+.dark .btn-secondary {
+  color: #F9A8D4;
+}
+
+/* Input styles */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #FCE7F3;
+  border-radius: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+  font-size: 0.95rem;
+}
+.input-field:focus {
+  border-color: #EC4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+.dark .input-field {
+  background: rgba(30, 15, 25, 0.5);
+  border-color: rgba(236, 72, 153, 0.2);
+  color: #F9FAFB;
+}
+
+/* Phase indicator colors */
+.phase-menstrual { background: linear-gradient(135deg, #F43F5E, #EC4899); }
+.phase-follicular { background: linear-gradient(135deg, #EC4899, #A78BFA); }
+.phase-fertile { background: linear-gradient(135deg, #22C55E, #4ADE80); }
+.phase-luteal { background: linear-gradient(135deg, #A78BFA, #8B5CF6); }
