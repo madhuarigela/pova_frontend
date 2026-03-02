@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
 
                     <h1 className="text-5xl sm:text-7xl font-extrabold mb-6 animate-fade-in flex flex-col items-center justify-center gap-6" style={{ animationDelay: '0.1s' }}>
-                        <img src="/logo.png" alt="Pova Logo" className="w-32 h-32 md:w-48 md:h-48 drop-shadow-2xl" />
+                        {/* <img src="/logo.png" alt="Pova Logo" className="w-32 h-32 md:w-48 md:h-48 drop-shadow-2xl" /> */}
                         <span className="bg-gradient-to-r from-pink-500 via-pink-600 to-lavender-500 bg-clip-text text-transparent">
                             Pova
                         </span>
